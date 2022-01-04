@@ -18,7 +18,14 @@ namespace PoductReviewManagementApplication
         }
         public void SelectTopThreeRecords(List<ProductReview> ProductReviewlist)
         {
+            //ToList() converts the collection to List by using Linq
             var records = (from product in ProductReviewlist orderby product.Rating descending select product).Take(3).ToList();
+            Display(records);
+        }
+        // Retrive All record from the list who’s rating are greater then 3 and productID is 1 or 4 or 9 using linq
+        public void RetrieveRecordsUsingRatingAndProductId(List<ProductReview> ProductReviewlist)
+        {
+            var records = (from Product in ProductReviewlist where (Product.ProductID == 1 || Product.ProductID == 4 || Product.ProductID == 9) && Product.Rating > 3 select Product).ToList();
             Display(records);
         }
     }
