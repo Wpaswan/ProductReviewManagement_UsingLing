@@ -17,3 +17,7 @@ foreach (var item in ProductReviewlist)
 {
     Console.WriteLine("ProductId:" + item.ProductID +" "+ "UserID:" + item.UserID + " " + "Rating:" + item.Rating + " " + "Review:" + item.Review + " " + "isLike:" + item.isLike);
 }
+//manage is object of management class
+Management manage = new Management();
+Console.WriteLine("Top 3 records according to rating");
+manage.SelectTopThreeRecords(ProductReviewlist);
