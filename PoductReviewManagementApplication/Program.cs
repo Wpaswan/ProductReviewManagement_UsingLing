@@ -23,4 +23,6 @@ Console.WriteLine("Top 3 records according to rating");
 manage.SelectTopThreeRecords(ProductReviewlist);
 Console.WriteLine("All record from the list who’s rating are greater then 3 and productID is 1 or 4 or 9 ");
 manage.RetrieveRecordsUsingRatingAndProductId(ProductReviewlist);
+Console.WriteLine("count of review present for each productID");
+manage.RetrieveCountOfRecords(ProductReviewlist);
 
