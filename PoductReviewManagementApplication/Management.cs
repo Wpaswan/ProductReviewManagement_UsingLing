@@ -57,7 +57,24 @@ namespace PoductReviewManagementApplication
             Display(records);
         }
         DataTable dataTable = new DataTable();
-        public void ProductReviewDataTable(List<ProductReview> ProductReviewlist)
+        //public void ProductReviewDataTable(List<ProductReview> ProductReviewlist)
+        //{
+        //    dataTable.Columns.Add("ProductId").DataType = typeof(Int32);
+        //    dataTable.Columns.Add("UserId").DataType = typeof(Int32);
+        //    dataTable.Columns.Add("Rating").DataType = typeof(Int32);
+        //    dataTable.Columns.Add("Review");
+        //    dataTable.Columns.Add("isLike").DataType = typeof(bool);
+        //    foreach (var item in ProductReviewlist)
+        //    {
+        //        dataTable.Rows.Add(item.ProductID, item.UserID, item.Rating, item.Review, item.isLike);
+        //    }
+        //    var productTable = from products in dataTable.AsEnumerable() select products;
+        //    foreach (DataRow product in productTable)
+        //    {
+        //        Console.WriteLine(product.Field<int>("ProductId") + " " + product.Field<int>("UserId") + " " + product.Field<int>("Rating") + " " + product.Field<string>("Review") + " " + product.Field<bool>("isLike"));
+        //    }
+        //}
+        public void RetrieveRecordsWhereIslikeTrue(List<ProductReview> ProductReviewlist)
         {
             dataTable.Columns.Add("ProductId").DataType = typeof(Int32);
             dataTable.Columns.Add("UserId").DataType = typeof(Int32);
@@ -68,7 +85,10 @@ namespace PoductReviewManagementApplication
             {
                 dataTable.Rows.Add(item.ProductID, item.UserID, item.Rating, item.Review, item.isLike);
             }
-            var productTable = from products in dataTable.AsEnumerable() select products;
+            var productTable = from products in this.dataTable.AsEnumerable()
+                               where products.Field<bool>("isLike").Equals(true)
+                               select products;
+
             foreach (DataRow product in productTable)
             {
                 Console.WriteLine(product.Field<int>("ProductId") + " " + product.Field<int>("UserId") + " " + product.Field<int>("Rating") + " " + product.Field<string>("Review") + " " + product.Field<bool>("isLike"));
@@ -77,4 +97,4 @@ namespace PoductReviewManagementApplication
 
     }
 }
-}
+
