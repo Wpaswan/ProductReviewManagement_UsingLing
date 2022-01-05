@@ -42,6 +42,8 @@ namespace PoductReviewManagementApplication
         {
             var records = from productReview in ProductReviewlist
                           select new { productReview.ProductID, productReview.Review };
+            //In foreach loop only productId and review is being printed
+
             foreach (var list in records)
             {
                 Console.WriteLine("ProductId :"+ list.ProductID + " " + "Review :" + list.Review);
