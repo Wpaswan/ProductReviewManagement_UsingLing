@@ -33,4 +33,6 @@ manage.SkipTopFiveRecords(ProductReviewlist);
 //manage.ProductReviewDataTable(ProductReviewlist);
 Console.WriteLine("All records whose is like is true");
 manage.RetrieveRecordsWhereIslikeTrue(ProductReviewlist);
+Console.WriteLine("Average rating of productId");
+manage.AverageProductId(ProductReviewlist);
 
