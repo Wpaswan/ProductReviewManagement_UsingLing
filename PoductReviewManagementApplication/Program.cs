@@ -31,8 +31,9 @@ Console.WriteLine("All records except top 5 records");
 manage.SkipTopFiveRecords(ProductReviewlist);
 //Console.WriteLine("Product review data table");
 //manage.ProductReviewDataTable(ProductReviewlist);
-Console.WriteLine("All records whose is like is true");
-manage.RetrieveRecordsWhereIslikeTrue(ProductReviewlist);
+//Console.WriteLine("All records whose is like is true");
+//manage.RetrieveRecordsWhereIslikeTrue(ProductReviewlist);
 Console.WriteLine("Average rating of productId");
 manage.AverageProductId(ProductReviewlist);
-
+Console.WriteLine("All records whose review is nice");
+manage.RetrieveRecordsWhereReviewnice(ProductReviewlist);
