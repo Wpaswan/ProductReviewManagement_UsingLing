@@ -25,4 +25,6 @@ Console.WriteLine("All record from the list who’s rating are greater then 3 an
 manage.RetrieveRecordsUsingRatingAndProductId(ProductReviewlist);
 Console.WriteLine("count of review present for each productID");
 manage.RetrieveCountOfRecords(ProductReviewlist);
+Console.WriteLine("Retrive only product Id");
+manage.RetrieveProductIdAndReview(ProductReviewlist);
 

@@ -37,5 +37,15 @@ namespace PoductReviewManagementApplication
                 Console.WriteLine(item.ProductID + "-----"+ item.Count);
             }
         }
+        //Method below is for retrive only product Id
+        public void RetrieveProductIdAndReview(List<ProductReview> ProductReviewlist)
+        {
+            var records = from productReview in ProductReviewlist
+                          select new { productReview.ProductID, productReview.Review };
+            foreach (var list in records)
+            {
+                Console.WriteLine("ProductId :"+ list.ProductID + " " + "Review :" + list.Review);
+            }
+        }
     }
 }
