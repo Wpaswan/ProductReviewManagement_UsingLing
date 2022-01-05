@@ -29,4 +29,6 @@ Console.WriteLine("Retrive only product Id");
 manage.RetrieveProductIdAndReview(ProductReviewlist);
 Console.WriteLine("All records except top 5 records");
 manage.SkipTopFiveRecords(ProductReviewlist);
+Console.WriteLine("Product review data table");
+manage.ProductReviewDataTable(ProductReviewlist);
 
