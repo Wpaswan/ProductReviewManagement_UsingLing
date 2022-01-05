@@ -47,5 +47,11 @@ namespace PoductReviewManagementApplication
                 Console.WriteLine("ProductId :"+ list.ProductID + " " + "Review :" + list.Review);
             }
         }
+        //Method below is for skipping top 5 records
+        public void SkipTopFiveRecords(List<ProductReview> ProductReviewlist)
+        {
+            var records = (from product in ProductReviewlist orderby product.Rating descending select product).Skip(5).ToList();
+            Display(records);
+        }
     }
 }

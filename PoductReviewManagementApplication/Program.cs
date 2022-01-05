@@ -27,4 +27,6 @@ Console.WriteLine("count of review present for each productID");
 manage.RetrieveCountOfRecords(ProductReviewlist);
 Console.WriteLine("Retrive only product Id");
 manage.RetrieveProductIdAndReview(ProductReviewlist);
+Console.WriteLine("All records except top 5 records");
+manage.SkipTopFiveRecords(ProductReviewlist);
 
